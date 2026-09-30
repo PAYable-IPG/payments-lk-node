@@ -1,0 +1,55 @@
+{
+  "name": "@payments-lk/node",
+  "version": "0.4.1",
+  "description": "The Node.js library for the Payments.lk API: checkouts, payments, refunds, payment links, saved cards, events, the account and webhook verification.",
+  "keywords": [
+    "payments",
+    "payments.lk",
+    "payable",
+    "sri lanka",
+    "lkr",
+    "checkout",
+    "webhooks"
+  ],
+  "homepage": "https://payments.lk/developers/sdks#node",
+  "bugs": {
+    "url": "https://github.com/PAYable-IPG/payments-lk-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PAYable-IPG/payments-lk-node.git"
+  },
+  "author": "Payments.lk <hello@payments.lk> (https://payments.lk)",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.17"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.11"
+  }
+}
