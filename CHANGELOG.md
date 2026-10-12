@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.2 (11 October 2026)
+
+Checkouts that live longer than 30 minutes.
+
+Added
+
+- `expiresInMinutes` on `checkouts.create()`: how long the hosted checkout takes a payment, a whole number from 5 to 10080 (seven days); 30 when left out. For a url you send by email or message rather than open at once. `checkout.expired` follows the time you asked for.
+- Requests say `payments-lk-node/0.4.2` in their `User-Agent`.
+
 ## 0.4.1 (29 September 2026)
 
 The first version on npm. The code is the same as 0.4.0.

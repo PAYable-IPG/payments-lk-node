@@ -31,7 +31,7 @@ describe("the client", () => {
     expect(header(0, "authorization")).toBe(`Bearer ${TEST_KEY}`);
     expect(header(0, "content-type")).toBe("application/json");
     expect(header(0, "idempotency-key")).toMatch(UUID);
-    expect(header(0, "user-agent")).toMatch(/^payments-lk-node\/0\.4\.1 node\//);
+    expect(header(0, "user-agent")).toMatch(/^payments-lk-node\/0\.4\.2 node\//);
     expect(JSON.parse(String(calls[0]?.init.body))).toEqual({ amountCents: 145_000, description: "Chicken kottu", reference: "order-1", successUrl: "myshop://paid" });
     expect(calls[0]?.init.redirect).toBe("error");
   });

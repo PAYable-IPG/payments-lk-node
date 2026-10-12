@@ -63,6 +63,8 @@ const checkout = await lk.checkouts.create(
 
 One to ten lines, each 1 to 99 of a unit price from Rs. 1 (`100`) to Rs. 1,000,000. Passing both `amountCents` and `lineItems` does not type check, and the API refuses it.
 
+A checkout takes a payment for 30 minutes. Sending the url by email or message instead of opening it at once? Pass `expiresInMinutes` (5 to 10080, seven days) and the page waits that long.
+
 When the checkout ends, the customer returns to `successUrl` or `cancelUrl` with `checkout=<id>` and `status=<succeeded|failed|canceled|expired>` added. That return proves nothing on its own: anyone can type a URL. Mark the order paid only after you have confirmed it.
 
 ## Confirm the payment

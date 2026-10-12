@@ -663,6 +663,13 @@ interface CheckoutParamsBase {
   saveCard?: boolean;
   /** The language the hosted checkout opens in. The checkout's url carries /si or /ta for Sinhala or Tamil. */
   locale?: Locale;
+  /**
+   * How long the hosted checkout takes a payment, in whole minutes: 30 when left
+   * out, from 5 to 10080 (seven days). Ask for longer when you send the url by
+   * email or message rather than opening it at once; checkout.expired follows
+   * when the time runs out unpaid.
+   */
+  expiresInMinutes?: number;
 }
 
 /** A checkout for one amount. */

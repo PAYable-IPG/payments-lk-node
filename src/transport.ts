@@ -1,7 +1,7 @@
 import { randomInt, randomUUID } from "node:crypto";
 import { ApiError, ConnectionError, errorFromResponse } from "./errors.js";
 
-export const VERSION = "0.4.1";
+export const VERSION = "0.4.2";
 export const DEFAULT_API_BASE = "https://api.payments.lk";
 
 const RETRY_STATUSES: ReadonlySet<number> = new Set([429, 500, 502, 503, 504]);

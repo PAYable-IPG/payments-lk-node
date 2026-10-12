@@ -1,6 +1,6 @@
 {
   "name": "@payments-lk/node",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "The Node.js library for the Payments.lk API: checkouts, payments, refunds, payment links, saved cards, events, the account and webhook verification.",
   "keywords": [
     "payments",
